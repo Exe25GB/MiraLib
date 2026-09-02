@@ -40,3 +40,64 @@ header p {
     font-weight: 300;     
     color: hwb(48 93% 5%);         
 }
+
+/* --- MENÚ LATERAL --- */
+.menu-lateral {
+    width: 250px;
+    background-color: #ffffff;
+    height: 100vh; 
+    border-right: 1px solid #e5e7eb;
+    padding: 20px 0;
+}
+
+.titulo-navegacion {
+    font-size: 11px;
+    color: #9ca3af;
+    letter-spacing: 1px;
+    margin-left: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.lista-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.item-menu {
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.item-menu:hover {
+    background-color: #f9fafb;
+}
+
+.item-menu a {
+    text-decoration: none;
+    color: #4b5563; /* Gris oscuro */
+    font-size: 14px;
+    font-weight: 500;
+    width: 100%;
+}
+
+.icono {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    color: #6b7280; 
+}
+
+
+.item-menu.activo {
+    background-color: #eff6ff; 
+}
+
+.item-menu.activo a, 
+.item-menu.activo .icono {
+    color: #1d4ed8; 
+}
