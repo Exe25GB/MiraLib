@@ -7,7 +7,7 @@
 
 ### - Información del proyecto:
 
-MiraLib sera una plataforma web que se desarrollara con **HTML** , **CSS** y **JavaScript**.Este servira para la gestión y consulta de un catálogo bibliográfico digital. El sistema centraliza la oferta de libros, documentos digitales y recursos multimedia de uso público.
+MiraLib sera una plataforma web que se desarrollara con **HTML** , **CSS** y **JavaScript**.Este servira para la gestión y consulta de un catálogo bibliográfico digital gratuito. El sistema centraliza en el comportamiento de libros, documentos digitales y recursos multimedia de uso público.
 
 ## - Requerimientos Iniciales del proyecto:
 
