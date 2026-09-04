@@ -47,7 +47,7 @@ header {
 }
 
 /* --- Logo Principal --- */
-.logo-principal {
+#logo-principal {
     height: 45px; /* Define la altura del logo (puedes ajustarla si lo quieres más grande o pequeño) */
     width: auto;  /* Mantiene las proporciones originales de la imagen */
     margin-right: 15px; /* Crea el espacio entre el logo y el texto "MiraLib" */
