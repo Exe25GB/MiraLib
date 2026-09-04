@@ -46,7 +46,6 @@ header {
     z-index: 1000;
 }
 
-<<<<<<< Updated upstream
 /* --- Logo Principal --- */
 .logo-principal {
     height: 45px; /* Define la altura del logo (puedes ajustarla si lo quieres más grande o pequeño) */
@@ -55,8 +54,6 @@ header {
     object-fit: contain; /* Asegura que el logo se vea nítido dentro de su espacio */
 }
 
-=======
->>>>>>> Stashed changes
 #titulo-principal {
     font-size: 1.75rem;
     font-weight: 800;
@@ -92,15 +89,9 @@ header .btn {
 
 header .btn:hover, 
 header .btn.active {
-<<<<<<< Updated upstream
     background-color: var(--miralib-fondo); 
     color: var(--miralib-color);
     transform: scale(1.05); 
-=======
-    background-color: var(--miralib-fondo); /* Se vuelve un poco gris al hacer hover */
-    color: var(--miralib-color);
-    transform: scale(1.05); /* Crece ligeramente */
->>>>>>> Stashed changes
 }
 
 /* ================= 4. MENÚ LATERAL (ASIDE) ================= */
@@ -144,11 +135,7 @@ header .btn.active {
     text-decoration: none;
     color: var(--texto-oscuro);
     font-weight: 500;
-<<<<<<< Updated upstream
     width: 100%; 
-=======
-    width: 100%; /* Soluciona el área de clic */
->>>>>>> Stashed changes
 }
 
 .v-lista-menu li svg {
@@ -167,11 +154,7 @@ header .btn.active {
 
 .v-lista-menu li:hover a, 
 .v-lista-menu li:hover svg {
-<<<<<<< Updated upstream
     color: var(--miralib-titulo); 
-=======
-    color: var(--miralib-titulo); /* Texto e ícono cambian a blanco puro */
->>>>>>> Stashed changes
 }
 
 /* ================= 5. DISEÑO RESPONSIVO (MÓVILES) ================= */
