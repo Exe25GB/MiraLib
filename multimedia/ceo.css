@@ -1,0 +1,51 @@
+:root {
+    /* Colores de Marca */
+    --miralib-color: #35835c;       /* Verde principal */
+    --miralib-titulo: #FFFFFF;      /* Blanco puro */
+    --miralib-fondo: #d2d7dc;       /* Gris claro para el fondo */
+    
+    /* Colores de UI general */
+    --bg-blanco: #ffffffcd;
+    --texto-oscuro: #333333;
+    --texto-claro: #FFFFFF;
+    --color-borde: #E0E0E0;
+    
+    /* Dimensiones */
+    --ancho-sidebar: 230px;
+}
+
+header {
+    background-color: var(--miralib-color);
+    color: var(--texto-claro);
+    display: flex;
+    align-items: center;
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--miralib-fondo);
+    color: var(--texto-oscuro);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* El fondo abarca toda la pantalla */
+}
+
+main {
+    display: flex;
+    flex: 1; /* Ocupa todo el espacio debajo de la cabecera */
+}
+
+/* --- Logo Principal --- */
+.logo-principal {
+    height: 45px; /* Define la altura del logo (puedes ajustarla si lo quieres más grande o pequeño) */
+    width: auto;  /* Mantiene las proporciones originales de la imagen */
+    margin-right: 15px; /* Crea el espacio entre el logo y el texto "MiraLib" */
+    object-fit: contain; /* Asegura que el logo se vea nítido dentro de su espacio */
+}

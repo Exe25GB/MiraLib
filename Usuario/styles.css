@@ -1,0 +1,83 @@
+/* Centrar el contenido vertical y horizontalmente en la pantalla */
+main:has(.contenedor-centro) {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Apila la imagen y el formulario uno sobre otro */
+    padding: 2rem;
+    gap: 1.5rem; /* Espacio entre la imagen y el formulario */
+}
+
+/* Estilo de la imagen (Logo o ilustración superior) */
+main > img {
+    max-width: 180px; /* Controla el tamaño para que no ocupe toda la pantalla */
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Diseño de Tarjeta (Card) para el formulario */
+.contenedor-centro {
+    background-color: var(--bg-blanco);
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); /* Sombra difuminada muy elegante */
+    width: 100%;
+    max-width: 400px; /* Ancho máximo cómodo para lectura */
+}
+
+/* Título de "Usuario" */
+.contenedor-centro h5 {
+    color: var(--miralib-color);
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* --- Personalización de los Inputs de Bootstrap --- */
+/* Cambia el borde azul genérico de Bootstrap al verde de MiraLib al hacer clic */
+.form-floating > .form-control:focus {
+    border-color: var(--miralib-color);
+    box-shadow: 0 0 0 0.25rem rgba(53, 131, 92, 0.25); /* Resplandor verde */
+}
+
+/* --- Botones --- */
+/* Soluciona el margen que faltaba añadiendo espacio entre botones */
+.d-grid {
+    gap: 1rem !important; 
+    margin-top: 2rem !important;
+}
+
+/* Botón de Continuar (Primario) */
+#Enter {
+    background-color: var(--miralib-color);
+    border-color: var(--miralib-color);
+    color: var(--miralib-titulo);
+    font-weight: 600;
+    padding: 0.7rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+#Enter:hover {
+    background-color: #276646; /* Verde más oscuro al pasar el cursor */
+    border-color: #276646;
+    transform: translateY(-2px); /* Pequeño salto hacia arriba */
+}
+
+/* Botón de Registrarse (Secundario) */
+#Registro {
+    background-color: transparent;
+    border: 2px solid var(--miralib-color); /* Botón con contorno */
+    color: var(--miralib-color);
+    font-weight: 600;
+    padding: 0.7rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+#Registro:hover {
+    background-color: var(--miralib-color);
+    color: var(--miralib-titulo);
+    transform: translateY(-2px);
+}

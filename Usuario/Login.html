@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Práctica JavaScript</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="../multimedia/ceo.css">
+
+    </head>
+
+    <body>
+
+        <header>
+            <img src="../multimedia/img/MiraLib-logo.png" alt="Error Logo" class="logo-principal">
+            <h1 id="titulo-principal">MiraLib</h1>
+            <span class="separador">|</span>
+            <p id="subtitulo"> 🕮 Una página para vender y compartir libros. </p>
+        </header>
+
+        <main>
+            <form class="contenedor-centro">
+                <h5>Usuario</h5>
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="v_correo" placeholder="name@example.com">
+                    <label for="floatingInput">Email</label>
+                </div>
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="v_pass" placeholder="Password">
+                    <label for="floatingPassword">Password</label>
+                </div>
+                <!--Falta un margen aqui-->
+                <div class="d-grid gap-2 col-6 mx-auto mt-3">
+                    <button class="btn btn-primary" type="button" id="Enter">Continuar</button>
+                    <button class="btn btn-primary" type="button" id="Registro">Registrarse</button>
+                </div>
+            </form>
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+</html>
