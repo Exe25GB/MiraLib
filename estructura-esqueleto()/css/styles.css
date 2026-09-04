@@ -1,0 +1,193 @@
+
+/* ================= 1. VARIABLES GLOBALES ================= */
+:root {
+    /* Colores de Marca */
+    --miralib-color: #35835c;       /* Verde principal */
+    --miralib-titulo: #FFFFFF;      /* Blanco puro */
+    --miralib-fondo: #d2d7dc;       /* Gris claro para el fondo */
+    
+    /* Colores de UI general */
+    --bg-blanco: #ffffffcd;
+    --texto-oscuro: #333333;
+    --texto-claro: #FFFFFF;
+    --color-borde: #E0E0E0;
+    
+    /* Dimensiones */
+    --ancho-sidebar: 230px;
+}
+
+/* ================= 2. ESTILOS BASE (BODY & MAIN) ================= */
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--miralib-fondo);
+    color: var(--texto-oscuro);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* El fondo abarca toda la pantalla */
+}
+
+main {
+    display: flex;
+    flex: 1; /* Ocupa todo el espacio debajo de la cabecera */
+}
+
+/* ================= 3. CABECERA (HEADER) ================= */
+header {
+    background-color: var(--miralib-color);
+    color: var(--texto-claro);
+    display: flex;
+    align-items: center;
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* --- Logo Principal --- */
+#logo-principal {
+    height: 45px; /* Define la altura del logo (puedes ajustarla si lo quieres más grande o pequeño) */
+    width: auto;  /* Mantiene las proporciones originales de la imagen */
+    margin-right: 15px; /* Crea el espacio entre el logo y el texto "MiraLib" */
+    object-fit: contain; /* Asegura que el logo se vea nítido dentro de su espacio */
+}
+
+#titulo-principal {
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin: 0;
+    color: var(--miralib-titulo);
+    letter-spacing: 0.5px;
+}
+
+.separador {
+    font-size: 1.5rem;
+    margin: 0 1.2rem;
+    color: rgba(255, 255, 255, 0.3); /* Línea divisoria semitransparente */
+}
+
+#subtitulo {
+    font-size: 1rem;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* --- Botón del Header (Deslogeo / Acción) --- */
+header .btn {
+    margin-left: auto; /* Empuja el botón a la esquina derecha */
+    background-color: var(--miralib-titulo); /* Fondo blanco */
+    color: var(--miralib-color); /* Letras verdes */
+    font-weight: 600;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+header .btn:hover, 
+header .btn.active {
+    background-color: var(--miralib-fondo); 
+    color: var(--miralib-color);
+    transform: scale(1.05); 
+}
+
+/* ================= 4. MENÚ LATERAL (ASIDE) ================= */
+.menu-lateral {
+    width: var(--ancho-sidebar);
+    background-color: var(--bg-blanco);
+    border-right: 1px solid var(--color-borde);
+    padding: 2rem 1rem;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo-navegacion {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #888888;
+    margin-bottom: 1.2rem;
+    padding-left: 1rem;
+    letter-spacing: 1.2px;
+}
+
+/* --- Lista de Enlaces --- */
+.v-lista-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.v-lista-menu li {
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 0.5rem;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.v-lista-menu li a {
+    text-decoration: none;
+    color: var(--texto-oscuro);
+    font-weight: 500;
+    width: 100%; 
+}
+
+.v-lista-menu li svg {
+    margin-right: 14px;
+    color: var(--miralib-color); /* Ícono verde por defecto */
+    transition: color 0.3s ease;
+}
+
+/* --- Efectos Hover (Al pasar el ratón) --- */
+.v-lista-menu li:hover {
+    background-color: var(--miralib-fondo); /* Fondo verde oscuro para generar contraste */
+    transform: scale(1.04) translateX(1px); /* Movimiento sutil de 5px */
+    box-shadow: 0 4px 12px rgba(53, 131, 92, 0.2); /* Sombra color verde para darle estilo */
+    z-index: 10;
+}
+
+.v-lista-menu li:hover a, 
+.v-lista-menu li:hover svg {
+    color: var(--miralib-titulo); 
+}
+
+/* ================= 5. DISEÑO RESPONSIVO (MÓVILES) ================= */
+/* Se aplica si la pantalla es menor a 768px de ancho */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem 1rem;
+    }
+
+    .separador {
+        display: none; /* Ocultamos el separador por falta de espacio */
+    }
+
+    #subtitulo {
+        margin-top: 0.5rem;
+    }
+
+    header .btn {
+        margin-left: 0; /* Quitamos la alineación a la derecha */
+        margin-top: 1rem;
+        width: 100%; /* Botón gigante para dedos en móviles */
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    .menu-lateral {
+        width: 100%; /* El menú lateral ocupa todo el ancho arriba */
+        border-right: none;
+        border-bottom: 1px solid var(--color-borde);
+        padding: 1.5rem 1rem;
+    }
+}
