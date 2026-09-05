@@ -169,3 +169,10 @@ buscador.addEventListener("input", (e) => {
 
 // Render inicial
 renderizarTabla();
+
+
+const botonRegistro = document.querySelector("#botonCatalogo");
+botonRegistro.addEventListener("click", () =>{
+
+    window.location.href = "../catálogo/index.html"
+})
