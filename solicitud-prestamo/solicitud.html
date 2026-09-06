@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MiraLib - Solicitud</title>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MiraLib - Solicitud</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-   <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="../_multimedia/ceo.css">
+    <!-- SECCIÓN 0: IMPLEMENTACIÓN DE BOOTSTRAP v5.3 + CONEXIÓN A LOS CSS -->
 
-</head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="../_multimedia/ceo.css">
+
+    </head>
 
 <body>
 
-    <!-- SECCIÓN 1: TITULO Y BOTON DE DESLOGEO -->
+    <!-- SECCIÓN 1: TITULO + LOGO + BOTON DE DESLOGEO -->
+
     <header>
         <img src="../_multimedia/img/MiraLib-logo.png" alt="Logo MiraLib" class="logo-principal">
         <h1 id="titulo-principal">MiraLib</h1>
@@ -26,7 +29,8 @@
 
      <main>
 
-    <!-- SECCIÓN 2: MENU LATERAL -->
+     <!-- SECCIÓN 2: MENU LATERAL PARA NAVEGAR A OTROS .INDEX -->
+
         <aside class = "menu-lateral">
             <p class = "titulo-navegacion">NAVEGACIÓN</p>
     
@@ -50,7 +54,7 @@
                         <path d="M8 7a.5.5 0 0 1 .5.5V9H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V10H6a.5.5 0 0 1 0-1h1.5V7.5A.5.5 0 0 1 8 7"/>
                         <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
                         </svg>
-                        <a href="../solicitud-prestamo/solicitud.html">Soliticud</a>
+                        <a href="../solicitud-prestamo/solicitud.html">Solicitudes</a>
                     </li>
 
     <!-- INVENTARIO -->
@@ -61,10 +65,84 @@
                         </svg>
                         <a href="../gestión-inventario/inventario.html">Inventario</a>
                     </li>
-            
                 </ul>
             </nav>
         </aside>
+
+    <!-- SECCIÓN 3: SOLICITUD DE PRESTAMO -->
+
+        <section class="contenido-principal flex-grow-1 p-4 d-flex justify-content-center align-items-start mt-4">
+
+    <!-- CREACIÓN DEL TITULO -->
+
+            <div class="card-inventario" style="width: 100%; max-width: 500px; padding: 2rem;">
+                <h4 font-weight: 700; margin-bottom: 1.5rem; text-align: left;>Solicitar Préstamo</h4>
+                <form id="formSolicitud">
+            
+    <!-- LABEL DEL NOMBRE DE USUARIO -->
+
+                    <div class="mb-3">
+                        <label for="nombreSolicitante" class="form-label fw-bold">Ingrese su nombre de usuario</label>
+                        <input type="text" class="form-control" id="nombreSolicitante" placeholder="Ej: Kalime" required>
+                    </div>
+
+    <!-- SELECTOR DE LIBROS (DISPONIBLES) -->
+
+                    <div class="mb-3">
+                        <label for="libroSolicitado" class="form-label fw-bold">Libro que quiera solicitar</label>
+
+                        <select id="libroSolicitado" class="form-select" required>
+                            <option value="" selected disabled>No se encuentra ningún libro disponible...</option>
+                        </select>
+
+                    </div>
+
+    <!-- FECHA DE CADUCO -->
+
+                    <div class="mb-4">
+                        <label for="fechaDevolucion" class="form-label fw-bold">Fecha de Devolución</label>
+                        <input type="date" class="form-control" id="fechaDevolucion" required>
+                    </div>
+
+    <!-- BOTON PARA ENVIAR SOLICITUD -->
+     
+                    <div class="d-grid gap-2">
+                        <button class="btn" style="background-color: var(--miralib-color); color: white; font-weight: 600; padding: 0.7rem;" type="submit">Enviar Solicitud</button>
+                    </div>
+                    </div>
+                
+    <!-- SECCIÓN 4: TABLA DE LIBROS SOLICITADOS -->
+     
+                <div class="col-12 col-xl-8">
+                <div class="card-inventario">
+                    <h5 class="mb-4" style="font-weight: 600;">Libros solicitados</h5>
+                        <div class="table-responsive">
+                        <table class="table table-hover align-middle">
+                            <thead class="table-header-miralib">
+
+                                <tr>
+                                    <th>#</th>
+                                    <th>Título</th>
+                                    <th>Autor</th>
+                                    <th>Categoría</th>
+                                    <th>Estado</th>
+                                    <th class="text-center">Acciones</th>
+                                </tr>
+
+                            </thead>
+                        <tbody id="tablaCuerpo" class="tabla-automatica">
+                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    
      </main>
+
+     <!-- SECCION 5: IMPLEMENTACION DE JAVASCRIPT Y CICLO DE CIERRE PARA BOOTSTRAP v5.3 -->
+
+     <script src="js/script-solicitud.js"></script>
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
+</html>

@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MiraLib - Catálogo</title>
+    <!-- SECCIÓN 0: IMPLEMENTACIÓN DE BOOTSTRAP v5.3 + CONEXIÓN A LOS CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MiraLib - Catálogo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-   <link rel="stylesheet" href="css/styles.css">
-   <link rel="stylesheet" href="../_multimedia/ceo.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="../_multimedia/ceo.css">
 
 </head>
 
 <body>
 
-    <!-- SECCIÓN 1: TITULO Y BOTON DE DESLOGEO -->
+    <!-- SECCIÓN 1: TITULO + LOGO + BOTON DE DESLOGEO -->
     <header>
         <img src="../_multimedia/img/MiraLib-logo.png" alt="Logo MiraLib" class="logo-principal">
         <h1 id="titulo-principal">MiraLib</h1>
@@ -27,12 +28,11 @@
 
      <main>
 
-    <!-- SECCIÓN 2: MENU LATERAL -->
+    <!-- SECCIÓN 2: MENU LATERAL PARA NAVEGAR A OTROS .INDEX -->
         <aside class = "menu-lateral">
             <p class = "titulo-navegacion">NAVEGACIÓN</p>
     
             <nav>
-
                 <ul class="v-lista-menu">
 
     <!-- CATáLOGO -->
@@ -51,7 +51,7 @@
                         <path d="M8 7a.5.5 0 0 1 .5.5V9H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V10H6a.5.5 0 0 1 0-1h1.5V7.5A.5.5 0 0 1 8 7"/>
                         <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
                         </svg>
-                        <a href="../solicitud-prestamo/solicitud.html">Soliticud</a>
+                        <a href="../solicitud-prestamo/solicitud.html">Solicitudes</a>
                     </li>
 
     <!-- INVENTARIO -->
@@ -67,17 +67,20 @@
         </aside>
 
     <!-- SECCIÓN 3: ÁREA PRINCIPAL (CATALOGO) -->
+
      <section class="contenido-principal flex-grow-1 p-4">
             <div class="row g-4 justify-content-start">
 
                     <div class="col-12 col-xl-8">
                         <div class="card-inventario">
                             
-    <!-- CATÁLOGO DE LA TABLA-->
+    <!-- SECCION 4: INTERFAZ DE BUSCAR CATÁLOGO EN LA TABLA -->
+
                             <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
                                 <h5>Catálogo de Ejemplares</h5>
                     
                             <div class="d-flex gap-2">
+
                                 <select id="filtroCategoria" class="form-select w-auto" aria-label="Filtro de catágorias">
                                     <option value="Todas" selected>Todas las categorías</option>
                                     <option value="Novela">Novela</option>
@@ -87,13 +90,17 @@
                                     <option value="Tecnología">Tecnología</option>
                                     <option value="Educación">Educación</option>
                                 </select>
+
                                 <input type="text" id="buscadorTabla" class="form-control w-auto" style="min-width: 260px;" placeholder="Buscar por título o autor...">
                             </div>
                         </div>
 
+     <!-- SECCION 5: CREACIÓN DE LAS VARIABLES DE LA TABLA PARA LOS RESPECTIVOS LIBROS -->
+
                             <div class="table-responsive">
                                 <table class="table table-hover align-middle">
                                     <thead class="table-header-miralib">
+
                                         <tr>
                                             <th>#</th>
                                             <th>Título</th>
@@ -103,9 +110,9 @@
                                             <th>Estado</th>
                                             <th class="text-center">Acciones</th>
                                         </tr>
+
                                     </thead>
                                     <tbody id="tablaCuerpo" class="tabla-automatica">
-                                        <!-- Contenido inyectado por JS -->
                                     </tbody>
                                 </table>
                             </div>
@@ -115,6 +122,9 @@
                 </div>
             </section>
         </main>
+
+    <!-- SECCION 6: IMPLEMENTACION DE JAVASCRIPT Y CICLO DE CIERRE PARA BOOTSTRAP v5.3 -->
+
         <script src="js/script-catalogo.js"></script>
         </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>

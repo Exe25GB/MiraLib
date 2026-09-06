@@ -90,7 +90,6 @@ formLibro.addEventListener("submit", (e) => {
     let libros = obtenerLibros();
 
     if (idEditando) {
-        // Modificar existente
         libros = libros.map(libro => {
             if (libro.id === parseInt(idEditando)) {
                 return { ...libro, titulo, autor, categoria, stock, estado };
@@ -167,7 +166,6 @@ buscador.addEventListener("input", (e) => {
     renderizarTabla(e.target.value);
 });
 
-// Render inicial
 renderizarTabla();
 
 
