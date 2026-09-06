@@ -74,6 +74,25 @@ header {
     font-weight: 400;
 }
 
+/* --- Botón del Header (Deslogeo / Acción) --- */
+header .btn {
+    margin-left: auto; /* Empuja el botón a la esquina derecha */
+    background-color: var(--miralib-titulo); /* Fondo blanco */
+    color: var(--miralib-color); /* Letras verdes */
+    font-weight: 600;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+header .btn:hover, 
+header .btn.active {
+    background-color: var(--miralib-fondo); 
+    color: var(--miralib-color);
+    transform: scale(1.05); 
+}
 
 /* ================= 4. MENÚ LATERAL (ASIDE) ================= */
 .menu-lateral {
@@ -136,4 +155,39 @@ header {
 .v-lista-menu li:hover a, 
 .v-lista-menu li:hover svg {
     color: var(--miralib-titulo); 
+}
+
+/* ================= 5. DISEÑO RESPONSIVO (MÓVILES) ================= */
+/* Se aplica si la pantalla es menor a 768px de ancho */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem 1rem;
+    }
+
+    .separador {
+        display: none; /* Ocultamos el separador por falta de espacio */
+    }
+
+    #subtitulo {
+        margin-top: 0.5rem;
+    }
+
+    header .btn {
+        margin-left: 0; /* Quitamos la alineación a la derecha */
+        margin-top: 1rem;
+        width: 100%; /* Botón gigante para dedos en móviles */
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    .menu-lateral {
+        width: 100%; /* El menú lateral ocupa todo el ancho arriba */
+        border-right: none;
+        border-bottom: 1px solid var(--color-borde);
+        padding: 1.5rem 1rem;
+    }
 }

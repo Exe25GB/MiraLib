@@ -11,7 +11,7 @@ botonContinuar.addEventListener("click", () =>{
     const v_pass = cuadroTexto2.value;
 
     if (sessionStorage.getItem("correo") == v_correo && sessionStorage.getItem("pass") == v_pass){
-        window.location.href = "../catálogo/index.html"
+        window.location.href = "../catálogo/catálogo.html"
     }else if (v_correo != "" && v_pass != ""){
         alert("Acceso denegado, correo o contraseña incorrectos")
         cuadroTexto1.value = ""
