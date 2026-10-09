@@ -1,26 +1,16 @@
-## Biblioteca Miralib 👁️
+# React + Vite
 
-### - Integrantes:
+This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
-- Víctor Godoy 
-- Exequiel Guzmán 
+Currently, two official plugins are available:
 
-### - Información del proyecto:
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-MiraLib sera una plataforma web que se desarrollara con **HTML** , **CSS** y **JavaScript**. Este servira para la gestión y consulta de un catálogo bibliográfico digital gratuito. El sistema se centraliza en el compartimiento de libros, documentos digitales y recursos multimedia de uso público.
+## React Compiler
 
-## - Requerimientos Iniciales del proyecto:
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-| [R-N°]   | [Nombre del Requerimiento]                 | Tipo Requerimiento          | Clasificación                   | Actores Relacionados      | [Descripción corta del requerimiento]                                                                | Estado     |
-|:---------|:-------------------------------------------|:----------------------------|:--------------------------------|:--------------------------|:-----------------------------------------------------------------------------------------------------|:-----------|
-|          |                                                                            |                           |                                                                                                      |            |
-| R.1      | Búsqueda y filtrado de catálogo            | Funcional                   | Funcional de usuario            | Usuario visitante / Socio | Buscar libros por título, autor o categoría mediante la interfaz.                                    | Integrado |
-| R.2      | Solicitud de préstamo en línea             | Funcional                   | Funcional de usuario            | Socio de la biblioteca    | Reservar o solicitar el préstamo de un libro disponible desde la ficha del producto.                 | Integrado |
-| R.3      | Formulario de registro con validaciones JS | Funcional                   | Funcional de usuario            | Cliente / Usuario         | Registro de nuevos usuarios en la plataforma validando campos obligatorios mediante JavaScript.      | Integrado |
-| R.4      | Visualización de catálogo multimedia       | Funcional                   | Funcional de usuario            | Cliente / Usuario         | Consultar la ficha detallada de un libro con imágenes y tráileres embebidos.                         | En Desarrollo |
-| R.5      | Gestión de inventario de libros            | Funcional                   | Funcional de sistema            | Administrador             | Registrar, editar o dar de baja ejemplares del catálogo web de la biblioteca.                        | Integrado |
-| R.6      | Estructura HTML5 semántica                 | No Funcional                | No funcional de producto        | Usuario / Navegador       | Construcción completa del sitio aplicando etiquetas semánticas (header, nav, main, section, footer). | Integrado |
-| R.7      | Estilos centralizados CSS3                 | No Funcional                | No funcional de producto        | Usuario / Navegador       | Diseño de interfaz gráfica modular mediante hojas de estilo externas sin uso de CSS inline.          | Integrado |
-| R.8      | Control de versiones colaborativo          | No Funcional                | No funcional de la Organización | Equipo de desarrollo      | Control de cambios alojado en repositorio remoto con mensajes claros y tareas distribuidas.          | Integrado |
-| R.9      | Navegación fluida e interconexión          | No Funcional                | No funcional de producto        | Socio / Cliente           | Navegación lógica entre las distintas páginas mediante hipervínculos funcionales y coherentes.       | Integrado |
-| R.10     | Compatibilidad multi-dispositivo           | No Funcional                | No funcional de producto        | Socio / Administrador     | Interfaz adaptable a la visualización en navegadores móviles y dispositivos de pantalla táctil.      | En Desarrollo |
+## Expanding the Oxlint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
