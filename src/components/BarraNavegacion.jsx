@@ -4,7 +4,8 @@ import logoWhite from '../assets/logo_white.svg';
 
 const BarraNavegacion = () => {
   return (
-    <nav className="navbar navbar-expand-md navbar-dark fixed-top" style={{ backgroundColor: '#215D43' }}>
+    <nav className="navbar navbar-expand-md navbar-dark fixed-top" style={{ backgroundColor: '#215D43', borderBottom: '1px solid #2E7F5C' }}>
+      
       <div className="container">
         
         <Link className="navbar-brand" to="/">
