@@ -1,5 +1,4 @@
 import React from 'react';
-// import './Nosotros.css'; // Opcional: si quieres crearle un CSS exclusivo a esta página
 
 const Nosotros = () => {
   return (
