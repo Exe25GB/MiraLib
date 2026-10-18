@@ -64,6 +64,7 @@ body {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  padding-top: 80px; /* Ajusta este valor si tu barra es más alta o más baja */
 }
 
 h1,
@@ -108,4 +109,95 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+}
+
+/* Estilos Barra de Navegacion */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw; /* 100% del ancho de la ventana */
+  z-index: 1000; /* Asegura que este encima de todo */
+  box-sizing: border-box; /* Evita que el padding(espacio del bloque) la haga mas grande del 100% */
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg); 
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 2rem;
+  color: var(--text-h);
+}
+
+.navbar-logo a {
+  color: var(--text-h);
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Estilos de los enlaces (Desktop) */
+.navbar-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.5rem;
+}
+
+.navbar-links li a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-links li a:hover {
+  color: var(--accent); /* Usamos el color de acento de tu tema */
+}
+
+/* Botón de menú móvil oculto por defecto */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.navbar-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--text-h); /* Color de las rayitas adaptado al tema */
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Responsive: Pantallas móviles */
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none; /* Oculto por defecto en móvil */
+    flex-direction: column;
+    position: absolute;
+    top: 70px; 
+    left: 0;
+    width: 100%;
+    background-color: var(--bg); /* Fondo del menú móvil adaptado al tema */
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+    padding: 1rem 0;
+    z-index: 100;
+  }
+
+  /* Clase que se activa con React (useState) */
+  .navbar-links.activo {
+    display: flex;
+  }
+
+  .navbar-links li {
+    padding: 10px 0;
+  }
 }
