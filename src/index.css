@@ -1,19 +1,22 @@
 :root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
+  /* 1. TEMA CLARO (Light Mode) */
+  --bg: #ffffff;      /* Fondo */
+  --text: #000000;    /* Letras */
+  --text-h: #000000;  /* Títulos */
+  
+  /* --- PALETA VERDE CLARA --- */
+  --accent: #3AA174;
+  --accent-border: #2E7F5C;
+  --accent-bg: #215D43;   
+  
+  /* --- Elementos secundarios --- */
   --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
   --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+  --shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
+  /* --- Tipografías --- */
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
 
   font: 18px/145% var(--sans);
   letter-spacing: 0.18px;
@@ -30,45 +33,41 @@
   }
 }
 
+/* TEMA OSCURO */
 @media (prefers-color-scheme: dark) {
   :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
+    --bg: #3b3b3b;      /* Fondo */
+    --text: #ffffff;    /* Letras */
+    --text-h: #ffffff;  /* Títulos */
+    
+    /* --- Elementos secundarios --- */
+    --border: #333333; 
     --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  }
-
-  #social .button-icon {
-    filter: invert(1) brightness(2);
+    --shadow: rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
   }
 }
 
+/* ESTRUCTURA GLOBAL Y PROTECCION (Bootstrap) */
 body {
   margin: 0;
+  /* Forzamos tus colores globales para que Bootstrap no los cambie */
+  background-color: var(--bg) !important;
+  color: var(--text) !important;
 }
 
 #root {
-  width: 1126px;
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  padding-top: 80px; /* Ajusta este valor si tu barra es más alta o más baja */
+  padding-top: 80px; /* Empuja el contenido para que la navbar no lo tape */
 }
 
-h1,
-h2 {
+/* FUENTE DE LETRA */
+h1, h2 {
   font-family: var(--heading);
   font-weight: 500;
   color: var(--text-h);
@@ -83,6 +82,7 @@ h1 {
     margin: 20px 0;
   }
 }
+
 h2 {
   font-size: 24px;
   line-height: 118%;
@@ -92,112 +92,16 @@ h2 {
     font-size: 20px;
   }
 }
+
 p {
   margin: 0;
 }
 
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
-}
-
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
-}
-
-/* Estilos Barra de Navegacion */
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw; /* 100% del ancho de la ventana */
-  z-index: 1000; /* Asegura que este encima de todo */
-  box-sizing: border-box; /* Evita que el padding(espacio del bloque) la haga mas grande del 100% */
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--bg); 
-  border-bottom: 1px solid var(--border);
-  padding: 1rem 2rem;
-  color: var(--text-h);
-}
-
-.navbar-logo a {
-  color: var(--text-h);
+a {
+  color: var(--accent);
   text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: bold;
 }
 
-/* Estilos de los enlaces (Desktop) */
-.navbar-links {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  gap: 1.5rem;
-}
-
-.navbar-links li a {
-  color: var(--text);
-  text-decoration: none;
-  font-size: 1rem;
-  transition: color 0.3s ease;
-}
-
-.navbar-links li a:hover {
-  color: var(--accent); /* Usamos el color de acento de tu tema */
-}
-
-/* Botón de menú móvil oculto por defecto */
-.navbar-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-}
-
-.navbar-toggle .bar {
-  width: 25px;
-  height: 3px;
-  background-color: var(--text-h); /* Color de las rayitas adaptado al tema */
-  border-radius: 2px;
-  transition: all 0.3s ease;
-}
-
-/* Responsive: Pantallas móviles */
-@media (max-width: 768px) {
-  .navbar-toggle {
-    display: flex;
-  }
-
-  .navbar-links {
-    display: none; /* Oculto por defecto en móvil */
-    flex-direction: column;
-    position: absolute;
-    top: 70px; 
-    left: 0;
-    width: 100%;
-    background-color: var(--bg); /* Fondo del menú móvil adaptado al tema */
-    border-bottom: 1px solid var(--border);
-    text-align: center;
-    padding: 1rem 0;
-    z-index: 100;
-  }
-
-  /* Clase que se activa con React (useState) */
-  .navbar-links.activo {
-    display: flex;
-  }
-
-  .navbar-links li {
-    padding: 10px 0;
-  }
+a:hover {
+  color: var(--accent-bg);
 }
