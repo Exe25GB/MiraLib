@@ -11,7 +11,6 @@ const BarraNavegacion = () => {
         {/* LOGO Y NOMBRE DEL PROYECTO */}
         <Link className="navbar-brand d-flex align-items-center gap-2" to="/">
           <img src={logoWhite} alt="MiraLib Logo" height="40" />
-          {/* Aquí agregamos el texto "MiraLib" */}
           <span style={{ 
             color: 'white', 
             fontWeight: 'bold', 
