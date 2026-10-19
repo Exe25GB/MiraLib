@@ -20,7 +20,7 @@ const Registro = () => {
       return;
     }
 
-    const nuevoUsuario = { nombre, email, password };
+    const nuevoUsuario = { nombre, email, password, pedidos: [] };
     localStorage.setItem('usuarios', JSON.stringify([...usuariosExistentes, nuevoUsuario]));
 
     alert('Registro exitoso. Ahora puedes iniciar sesión.');
