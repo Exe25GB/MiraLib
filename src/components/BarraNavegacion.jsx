@@ -8,10 +8,21 @@ const BarraNavegacion = () => {
       
       <div className="container">
         
-        <Link className="navbar-brand" to="/">
+        {/* LOGO Y NOMBRE DEL PROYECTO */}
+        <Link className="navbar-brand d-flex align-items-center gap-2" to="/">
           <img src={logoWhite} alt="MiraLib Logo" height="40" />
+          {/* Aquí agregamos el texto "MiraLib" */}
+          <span style={{ 
+            color: 'white', 
+            fontWeight: 'bold', 
+            fontSize: '1.5rem',
+            letterSpacing: '1px'
+          }}>
+            MiraLib
+          </span>
         </Link>
 
+        {/* Botón Menú Móvil */}
         <button 
           className="navbar-toggler border-0" 
           type="button" 
@@ -24,6 +35,7 @@ const BarraNavegacion = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
 
+        {/* Enlaces */}
         <div className="collapse navbar-collapse" id="menuNavegacion">
           <ul className="navbar-nav ms-auto gap-md-4 text-center mt-3 mt-md-0">
             <li className="nav-item">
