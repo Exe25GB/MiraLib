@@ -33,7 +33,7 @@ const Login = () => {
       <form onSubmit={manejarLogin} style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '1.5rem' }}>
         <BloqueInput 
           tipo="email" 
-          placeholder="Correo electsdsdsdrónico" 
+          placeholder="Correo electronico" 
           valor={email} 
           alCambiar={(e) => setEmail(e.target.value)} 
         />
