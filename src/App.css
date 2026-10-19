@@ -5,3 +5,11 @@
 .navbar-nav .nav-link:hover {
   color: var(--accent-bg) !important;
 }
+
+.navbar a, .navbar span {
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #0c804d !important;
+}
