@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1792370030937" clover="3.2.0">
+  <project timestamp="1792370030937" name="All files">
+    <metrics statements="7" coveredstatements="6" conditionals="6" coveredconditionals="5" methods="4" coveredmethods="3" elements="17" coveredelements="14" complexity="0" loc="7" ncloc="7" packages="1" files="3" classes="3"/>
+    <file name="BloqueInput.jsx" path="C:\Users\exe\Documents\GitHub\MiraLib\src\components\BloqueInput.jsx">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="3" count="2" type="stmt"/>
+      <line num="4" count="3" type="stmt"/>
+    </file>
+    <file name="BotonDirecciones.jsx" path="C:\Users\exe\Documents\GitHub\MiraLib\src\components\BotonDirecciones.jsx">
+      <metrics statements="2" coveredstatements="2" conditionals="6" coveredconditionals="5" methods="1" coveredmethods="1"/>
+      <line num="3" count="1" type="cond" truecount="4" falsecount="0"/>
+      <line num="4" count="2" type="stmt"/>
+    </file>
+    <file name="BuscadorLibro.jsx" path="C:\Users\exe\Documents\GitHub\MiraLib\src\components\BuscadorLibro.jsx">
+      <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="12" count="0" type="stmt"/>
+    </file>
+  </project>
+</coverage>
